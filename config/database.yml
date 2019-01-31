@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: hum_app_backend_development
+  username: hum
+  password: hum
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +60,8 @@ development:
 test:
   <<: *default
   database: hum_app_backend_test
+  username: hum
+  password: hum
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,5 +85,5 @@ test:
 production:
   <<: *default
   database: hum_app_backend_production
-  username: hum_app_backend
-  password: <%= ENV['HUM_APP_BACKEND_DATABASE_PASSWORD'] %>
+  # username: hum_app_backend
+  # password: <%= ENV['HUM_APP_BACKEND_DATABASE_PASSWORD'] %>
